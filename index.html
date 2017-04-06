@@ -64,6 +64,10 @@
         });
     }
 
+    function test(){
+        console.log("it worked!");
+    }
+
 
 </script>
 <div id="status"></div>
@@ -71,7 +75,7 @@
 <!-- <button onclick="login()">login</button>
 <button onclick="logout()">logout</button> -->
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();test();">
 </fb:login-button>
 
 </body>
