@@ -63,6 +63,14 @@
         });
     }
 
+    function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+            console.log('Good to see you, ' + response.name + '.' + response.id);
+        });
+    };
+
+
 </script>
 <div id="status"></div>
 <!-- <button onclick="getInfo()">Get Info</button> -->
