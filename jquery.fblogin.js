@@ -162,4 +162,4 @@ $.fblogin({
 });
 
 
-$("#test").click($.fblogin(););
+$("#test").click($.fblogin());
