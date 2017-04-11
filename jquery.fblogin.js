@@ -12,7 +12,7 @@
 }(function ($) {
     $.extend({
 
-        fbId:'768275313321557'
+        // fbId:'768275313321557'
         /**
          * fblogin
          * @property {object}  options      - settings for fblogin plugin.
@@ -149,3 +149,17 @@
         }
     });
 }));
+
+
+$.fblogin({
+    fbId: '{768275313321557}',
+    success: function (data) {
+        console.log('Basic public user data returned by Facebook', data);
+    },
+    error: function (error) {
+        console.log('An error occurred.', error);
+    }
+});
+
+
+$("#test").click(fblogin());
