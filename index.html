@@ -15,8 +15,8 @@
   				FB.api("/me?fields=id,name,email"), function(response) {
     				console.log('Successful login for: ' + response.name);
     				$("#info").append("<p>" + response.email + "</p>");
-						console.log(response.picture.data.url);
-						$("#info").append("<img src=" + response.picture.data.url + "alt= />");
+						//console.log(response.picture.data.url);
+						//$("#info").append("<img src=" + response.picture.data.url + "alt= />");
   				};
 				},
       	onError: function(data) {},     //what to do on error
