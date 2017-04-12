@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Facebook Login JavaScript Example</title>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<title>Test... again.</title>
+	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+  	<script type='text/javascript' src='flogin.js'></script>
+  	<script type='text/javascript'>
+  	  $(function() {
+  	    $('#login').facebook_login({
+  	      appId: '768275313321557',  # your facebook application id
+  	      endpoint: '/sessions/new',      # where to POST the response to
+  	      onSuccess: function(data) {},   # what to do on success, usually redirect
+  	      onError: function(data) {}      # what to do on error
+  	      permissions: 'read_stream'      # what permissions you need, default is just email
+  	    });
+  	  });
+  	</script>
 </head>
 <body>
-
-
-<!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
-
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
-<button id="test">test</button>
-
-<div id="status">
-</div>
-
-<div id="info">
-</div>
-
-
-<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
-<script src="main.js"></script>
+    <a href='#' id='login'>Login with Facebook</a>
 </body>
 </html>
