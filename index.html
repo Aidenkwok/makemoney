@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Test... again.</title>
+	<link rel="stylesheet" href="stylesheet.css">
 	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
   	<script type='text/javascript' src='flogin.js'></script>
-
   	<script type='text/javascript'>
   	  $(function() {
   	    $('#login').facebook_login({
@@ -24,7 +24,9 @@
   	</script>
 </head>
 <body>
-	<button id ="login">Login!</button>
-   	<div id="info"></div>
+	<div id="wrapper">
+		<button id ="login">Login</button>
+	   	<div id="info"></div>
+   	</div>
 </body>
 </html>

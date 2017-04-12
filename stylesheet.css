@@ -1,0 +1,31 @@
+#wrapper{
+	height: 100vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+
+#login{
+	text-transform: uppercase;
+	font-weight: bold;
+	color:white;
+	box-shadow: none;
+	font-size:1em;
+	padding:0.5em 0.6em;
+	background-color: #006400;
+	border-radius: 8px;
+	border: none;
+	transition:0.2s;
+}
+
+#login:hover{
+	color:red;
+	box-shadow: none;
+	font-size:1em;
+	border:1.2px solid red;
+	padding:0.7em;
+	background-color: transparent;
+	border-radius: 8px;
+	transition:0.2s;
+}
