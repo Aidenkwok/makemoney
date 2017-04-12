@@ -12,7 +12,7 @@
   	      	appId: '768275313321557',  //your facebook application id
   	      	onSuccess:   function testAPI() {
     				console.log('Welcome!  Fetching your information.... ');
-    				FB.api("me?fields=id,name,email,picture.width(200).height(200)", function(response) {
+    				FB.api("me?fields=id,name,email,picture.width(200).height(200)"), function(response) {
       				console.log('Successful login for: ' + response.name);
       				$("#info").append("<p>" + response.email + "</p>");
 							console.log(response.picture.data.url);
