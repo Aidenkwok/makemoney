@@ -15,7 +15,7 @@
     			FB.api("me?fields=id,name,picture{url}", function(response) {
       			console.log('Successful login for: ' + response.name);
       			$("#info").append("<p>" + response.email + "</p>");
-						console.log(response.picture{url});
+						console.log(response.picture);
     			});
   			},   //what to do on success, usually redirect
   	      onError: function(data) {},     //what to do on error
