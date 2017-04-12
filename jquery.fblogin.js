@@ -31,7 +31,7 @@ FB.AppEvents.logPageView();
 }(function ($) {
     $.extend({
 
-        fbId:'768275313321557'
+        options.fbId:'768275313321557'
         /**
          * fblogin
          * @property {object}  options      - settings for fblogin plugin.
