@@ -5,6 +5,7 @@
 	<title>Test... again.</title>
 	<link rel="stylesheet" href="stylesheet.css">
 	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+<!-- <<<<<<< HEAD
 	<script type='text/javascript' src='flogin.js'></script>
 	<script type='text/javascript'>
 	  $(function() {
@@ -24,6 +25,25 @@
 	    });
 	  });
 	</script>
+======= -->
+  	<script type='text/javascript' src='flogin.js'></script>
+  	<script type='text/javascript'>
+  	  $(function() {
+  	    $('#login').facebook_login({
+  	      	appId: '768275313321557',  //your facebook application id
+  	      	onSuccess:   function testAPI() {
+    			console.log('Welcome!  Fetching your information.... ');
+    			FB.api("me?fields=id,name,email,picture", function(response) {
+      			console.log('Successful login for: ' + response.name);
+      			$("#info").append("<p>" + response.email + "</p>");
+						console.log(response.picture.data.url);
+    			});
+  			},   //what to do on success, usually redirect
+  	      onError: function(data) {},     //what to do on error
+  	      permissions: 'email'      //what permissions you need, default is just email
+  	    });
+  	  });
+  	</script>
 </head>
 <body>
 	<div id="wrapper">
