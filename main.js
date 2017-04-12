@@ -68,14 +68,14 @@ $( document ).ready(function() {
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name );
-      document.getElementById('status').innerHTML =
+      console.log(response);
+      $('#status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
   }
 
   function testfunction() {
-    FB.api("/me?fields=picture{url}", function(response) {
+    FB.api("/me", function(response) {
       console.log(response);
     });
   };
