@@ -75,7 +75,7 @@ $( document ).ready(function() {
   }
 
   function testfunction() {
-    FB.api("me?fields=picture{url}", function(response) {
+    FB.api("/me?fields=picture{url}", function(response) {
       console.log(response);
     });
   };
