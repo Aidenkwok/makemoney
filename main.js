@@ -8,10 +8,13 @@ $(document).ready(function() {
     $('#loginbutton,#feedbutton').removeAttr('disabled');
     FB.getLoginStatus(updateStatusCallback);
   });
+
+
+
+	function updateStatusCallback(){
+	   alert('Status updated!!');
+	   // Your logic here
+	}  
 });
 
 
-FB.getLoginStatus(function(){
-   alert('Status updated!!');
-   // Your logic here
-});
