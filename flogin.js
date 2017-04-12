@@ -7,9 +7,9 @@
 (function($) {
   $.fn.facebook_login = function(options) {
     var defaults = {
-      endpoint: '/sessions/new',
+      //endpoint: '/sessions/new',
       permissions: 'email',
-      onSuccess: function(data) { console.log([200,'OK']); },
+      onSuccess: function(data) { console.log(data.name); },
       onError: function(data) { console.log([500,'Error']); }
     };
 
