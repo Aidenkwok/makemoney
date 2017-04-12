@@ -7,6 +7,26 @@
 <body>
 	<button id="loginbutton">login</button>
 
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '768275313321557',
+	      xfbml      : true,
+	      version    : 'v2.8'
+	    });
+	    FB.AppEvents.logPageView();
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>
+    
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="main.js"></script>
 </body>

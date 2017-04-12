@@ -151,15 +151,15 @@
 }));
 
 
-$.fblogin({
-    fbId: '{768275313321557}',
-    success: function (data) {
-        console.log('Basic public user data returned by Facebook', data);
-    },
-    error: function (error) {
-        console.log('An error occurred.', error);
-    }
-});
+// $.fblogin({
+//     fbId: '{768275313321557}',
+//     success: function (data) {
+//         console.log('Basic public user data returned by Facebook', data);
+//     },
+//     error: function (error) {
+//         console.log('An error occurred.', error);
+//     }
+// });
 
 
 $("#test").click($.fblogin());
