@@ -15,7 +15,15 @@ FB.AppEvents.logPageView();
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
     
-
+$.fblogin({
+    fbId: '768275313321557',
+    success: function (data) {
+        console.log('Basic public user data returned by Facebook', data);
+    },
+    error: function (error) {
+        console.log('An error occurred.', error);
+    }
+});
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
@@ -30,8 +38,6 @@ FB.AppEvents.logPageView();
     }
 }(function ($) {
     $.extend({
-
-        options.fbId ='768275313321557'
         /**
          * fblogin
          * @property {object}  options      - settings for fblogin plugin.
