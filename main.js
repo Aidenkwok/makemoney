@@ -9,3 +9,9 @@ $(document).ready(function() {
     FB.getLoginStatus(updateStatusCallback);
   });
 });
+
+
+FB.getLoginStatus(function(){
+   alert('Status updated!!');
+   // Your logic here
+});
