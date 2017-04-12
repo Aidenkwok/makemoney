@@ -11,7 +11,7 @@
 	    $('#login').facebook_login({
       	appId: '768275313321557',  //your facebook application id
       	onSuccess:   function testAPI() {  //what to do on success, usually redirect
-  				// console.log('Welcome!  Fetching your information.... ');
+  				console.log('Welcome!  Fetching your information.... ');
   				FB.api('/me'), function(response) {
     				console.log('Successful login for: ' + response.name);
     				// $("#info").append("<p>" + response.email + "</p>");
