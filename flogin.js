@@ -48,7 +48,7 @@
             $.ajax({
               url: settings.endpoint,
               data: {user_id: user_id,token: token,email: user.email},
-              type: 'POST',
+              //type: 'POST',
               async: false,
             }).done(settings.onSuccess());
           });
@@ -57,8 +57,7 @@
         }
       }, {scope: settings.permissions});
 
-      return false; 
+      return false;
     });
   }
 })(jQuery);
-
