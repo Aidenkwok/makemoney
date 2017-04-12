@@ -32,7 +32,8 @@
       FB.init({
         appId: settings.appId,
         status: true,
-        xfbml: true
+        xfbml: true,
+        version:'v2.8'
       });
     };
 
