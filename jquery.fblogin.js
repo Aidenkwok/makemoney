@@ -15,15 +15,6 @@ FB.AppEvents.logPageView();
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
     
-$.fblogin({
-    fbId: '768275313321557',
-    success: function (data) {
-        console.log('Basic public user data returned by Facebook', data);
-    },
-    error: function (error) {
-        console.log('An error occurred.', error);
-    }
-});
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
@@ -187,4 +178,24 @@ $.fblogin({
 // });
 
 
-$("#test").click($.fblogin());
+
+$('#test').click(function () {
+
+                var fbPermissions = getPermissions();
+
+                $.fblogin({
+                    fbId: '768275313321557',
+                    permissions: fbPermissions,
+                    // fields: 'first_name,last_name,locale,email,birthday',
+                })
+                .fail(function (error) {
+                  console.log('error callback', error);
+                })
+                .progress(function (data) {
+                    console.log('progress', data);
+                })
+                .done(function (data) {
+                    console.log('done everything', data);
+                    $('.success-callback').html(JSON.stringify(data, null, '\t'));
+                });
+            });
