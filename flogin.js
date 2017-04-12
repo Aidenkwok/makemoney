@@ -9,7 +9,7 @@
     var defaults = {
       //endpoint: '/sessions/new',
       permissions: 'email',
-      onSuccess: function(data) { console.log(data.name); },
+      onSuccess: function(data) { console.log([200,'OK']); },
       onError: function(data) { console.log([500,'Error']); }
     };
 
