@@ -17,7 +17,7 @@
       				$("#info").append("<p>" + response.email + "</p>");
 							console.log(response.picture.data.url);
 							$("#info").append("<img src=" + response.picture.data.url + "alt= />");
-    				});
+    				};
   				},   //what to do on success, usually redirect
   	      onError: function(data) {},     //what to do on error
   	      permissions: 'email' ,'picture'     //what permissions you need, default is just email
