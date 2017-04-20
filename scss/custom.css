@@ -16,7 +16,7 @@ body, h3 {
 
 .background {
   box-shadow: 7px 7px 5px lightgrey;
-  background-color: #FFA74F;
+  background-color: green;
   height: 20em;
   width: 40em;
   padding: 0.8em; }
