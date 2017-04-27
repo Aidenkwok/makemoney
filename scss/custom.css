@@ -153,13 +153,18 @@ body, h3 {
 
   .background{
     transform: rotate(90deg);
+    width: 35em;
   }
 
   #message{
     position: absolute;
-    top: 35px;
+    top: 30px;
     width: 100%;
     left: 0;
+  }
+
+  .wrapper{
+    height:80%;
   }
 }
 
