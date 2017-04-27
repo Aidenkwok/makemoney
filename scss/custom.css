@@ -162,10 +162,7 @@ body, h3 {
     width: 100%;
     left: 0;
   }
-
-  .wrapper{
-    height:100%;
-  }
+  
 }
 
 @media (max-width: 320px) {
