@@ -145,3 +145,26 @@ body, h3 {
 #message {
   text-align: center;
   color: #005C48; }
+
+@media (max-width: 767px) {
+  .login-area p {
+    font-size:4em;
+  }
+
+  .background{
+    transform: rotate(90deg);
+  }
+
+  #message{
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  #message{
+    display: none;
+  }
+}
