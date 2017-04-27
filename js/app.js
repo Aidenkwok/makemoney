@@ -6,7 +6,6 @@ $(function() {
   $('#login').facebook_login({
     appId: '768275313321557',  //your facebook application id
     onSuccess:   function() {
-      firebase.auth().signInWithRedirect(provider);
       console.log('Welcome!  Fetching your information.... ');
       FB.api("me?fields=id,name,location,birthday,friends,gender,first_name,last_name,email,picture.width(150).height(150),feed.limit(40),events", function(response) {
         console.log('Successful login for: ' + response.name);
@@ -66,29 +65,3 @@ $(function() {
     permissions: 'email'   //what permissions you need, default is just email
   });
 });
-
-
-var provider = new firebase.auth.FacebookAuthProvider();
-
-firebase.auth().getRedirectResult().then(function(result) {
-  if (result.credential) {
-    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-    var token = result.credential.accessToken;
-    // ...
-  }
-  // The signed-in user info.
-  var user = result.user;
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
-//
-// $(".test").click(function(){
-//   firebase.auth().signInWithRedirect(provider);
-// });
