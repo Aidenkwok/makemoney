@@ -169,7 +169,17 @@ body, h3 {
     position: absolute;
     top: 30px;
     width: 100%;
-    left: 0; } }
+    left: 0;  }
+  #message p{
+    max-width: 50%;
+  }
+  #name{
+    font-size: 2em;
+  }
+  #general{
+    transform: rotate(90deg);
+  }
+  }
 
 @media (max-width: 320px) {
   #message {
