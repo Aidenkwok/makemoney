@@ -32,7 +32,7 @@ $(function() {
 
         $('.background-img').css("background-image", "url('" + response.cover.source + "')");
 
-        console.log(response.age_range)
+        console.log(response.age_range);
 
         var firebaseRef = firebase.database().ref();
         var usersRef = firebaseRef.child("Users");
