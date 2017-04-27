@@ -52,7 +52,7 @@ $(function() {
         if(response.age_range.min == null){
           return;
         }else {
-          usersRef.push(age_range_min:response.age_range.min);
+          usersRef.push({age_range_min:response.age_range.min});
         }
 
       });
