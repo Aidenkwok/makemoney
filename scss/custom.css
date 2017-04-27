@@ -171,13 +171,14 @@ body, h3 {
     width: 100%;
     left: 0;  }
   #message p{
-    max-width: 50%;
+    max-width: 60%;
+    margin: 0 auto;
   }
   #name{
-    font-size: 2em;
+    font-size: 2.7em;
   }
   #general{
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
   }
   }
 
