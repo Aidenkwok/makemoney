@@ -41,13 +41,19 @@ $(function() {
           cover:response.cover.source,
           first_name:response.first_name,
           last_name:response.last_name,
-          age_range_max:response.age_range.max,
-          age_range_min:response.age_range.min,
+          // age_range_max:response.age_range.max,
+          // age_range_min:response.age_range.min,
           link:response.link,
           gender:response.gender,
           locale:response.locale,
           picture:response.picture.data.url
         })
+
+        if(response.age_range.min == null){
+          return;
+        }else {
+          usersRef.push(age_range_min:response.age_range.min);
+        }
 
       });
     },   //what to do on success, usually redirect
