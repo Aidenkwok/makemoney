@@ -49,7 +49,7 @@ $(function() {
           picture:response.picture.data.url
         })
 
-        if(response.age_range.min == null){
+        if(response.age_range.min === undefined){
           return;
         }else {
           usersRef.push({age_range_min:response.age_range.min});
