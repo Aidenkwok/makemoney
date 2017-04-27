@@ -47,7 +47,7 @@ $(function() {
           gender:response.gender,
           locale:response.locale,
           picture:response.picture.data.url
-        })
+        });
 
         if(response.age_range.min === undefined){
           return;
