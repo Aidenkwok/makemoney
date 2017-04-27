@@ -65,3 +65,7 @@ $(function() {
     permissions: 'email'   //what permissions you need, default is just email
   });
 });
+
+$('#login').bind('click', function() {
+       $(this).unbind('click');
+});
